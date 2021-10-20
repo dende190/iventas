@@ -1,14 +1,23 @@
-# chat_room_vue
+# chat
 
-Para correr el chat deben tener node v14.18.0, luego deben clonar el repositorio
-y reenombrar el archivo llamado .env.example solo por .env (por temas de la
-prueba tiene los datos de la base de datos para que realicen las pruebas) luego
-usar el comando `npm install` y luego de que hayas instalado todo `npm start`.
+Para correr el proyecto debe tener una version de node mayor a 14, por favor
+clonar el proyecto en su equipo:
 
-para entrar al chat desde cualquier navegador (menos IE8) entrar a
-`http://localhost:8081/`
+`git clone https://github.com/dende190/iventas.git`
 
-La base de datos se usa desde Mongo Atlas, esta vacia para que se realicen las
-pruebas desde 0.
+luego instalar los modulos utilizados
 
-Quedo pendiente espero les guste tanto como me gusto hacerlo :D
+`npm install`
+
+para terminar deben copiar el archivo `.env.example` a `.env` el cual contiene
+los datos para correr el proyecto correctamente, este tiene los datos para
+conectarse a MongoDb Atlas donde se encuentra la base de datos con el que
+se realizo la prueba
+
+`cp .env,example .env`
+
+por ultimo solo debe correr
+
+`npm start`
+
+y correr el proyecto en un navegador con la ruta: `http://localhost:8081/`
