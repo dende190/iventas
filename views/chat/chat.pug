@@ -1,0 +1,93 @@
+extends ../layouts/base
+block styles
+  link(rel="stylesheet", href="/assets/css/chat.css")
+block content
+  div.chat
+    div.my_info
+      img(class="my_img" src=`${user.image}`)
+      p.my_name #{user.name}
+      small.my_tel #{user.phone}
+      div.contaner_icon
+        img(class="icon" src="/assets/img/chat.png")
+        p.icon_text Chat
+    div.chat_content
+      div.content_other_user_header
+        img(class="contact_img_header" src=`${contactData.image}`)
+        p.contact_name_header #{contactData.name}
+      div.container_chat_with_buttons
+        div.messages
+          ul.list_messages
+            each message in messages
+              li(
+                class=`${
+                  (message.userId === user.id) ?
+                  'my_message' :
+                  'contact_message'
+                }`
+              )
+                img(
+                  class="user_chat_image"
+                  src=`${
+                    (message.userId === user.id) ?
+                    user.image :
+                    contactData.image
+                  }`
+                )
+                div(
+                  class=`container_message ${
+                    (message.userId === user.id) ?
+                    'container_my_message' :
+                    ''
+                  }`
+                )
+                  p #{message.message}
+            li(class="message-clone" hidden="true")
+              img.user_chat_image
+              div.container_message
+                p.text
+        hr
+        div.container_action_messages
+          input(
+            type="text"
+            class="jsMessage input_message"
+            placeholder="Escriba un mensaje..."
+          )
+          input(type="hidden" class="jsUserId" value=`${user.id}`)
+          input(type="hidden" class="jsMyImage" value=`${user.image}`)
+          input(type="hidden" class="jsContactImage" value=`${contactData.image}`)
+          button(class="jsSendMessage button_send_message")
+            img(class="icon_send_message" src="/assets/img/enviar_mensaje,png")
+    div.contact_info
+      img(class="contact_img" src=`${contactData.image}`)
+      p.my_name #{contactData.name}
+      small.my_tel #{contactData.phone}
+      div.contact_data
+        p Datos del contacto
+        div.container_data_contat
+          if contactData.note
+            div.container_data
+              small.title_data Nota
+              p.data #{contactData.note}
+          if contactData.age
+            div.container_data
+              small.title_data Edad
+              p.data #{contactData.age}
+          if contactData.email
+            div.container_data
+              small.title_data Correo
+              p.data #{contactData.email}
+          if contactData.priority
+            div.container_data
+              small.title_data Prioridad
+              p.data #{contactData.priority}
+          if contactData.problem
+            div.container_data
+              small.title_data Problema
+              p.data #{contactData.problem}
+          if contactData.curp
+            div.container_data
+              small.title_data CURP
+              p.data #{contactData.curp}
+block scripts
+  script(src="/socket.io/socket.io.js")
+  script(src="/assets/js/chat.js")

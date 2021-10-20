@@ -1,0 +1,199 @@
+.chat {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+}
+
+.my_info {
+  text-align: center;
+  margin-top: 40px;
+  width: 20%;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+}
+
+.my_img {
+  width: 104.96px;
+}
+
+.my_name {
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  color: #2C2E50;
+  margin-bottom: 0;
+}
+
+.my_tel {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2C2E50;
+}
+
+.contaner_icon {
+  width: 100%;
+  height: 102px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+  background: rgba(0, 153, 255, 0.05);
+}
+
+.icon {
+  width: 20px;
+  height: 19px;
+  margin-right: 24px;
+}
+
+.icon_text {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #2C2E50;
+  mix-blend-mode: normal;
+}
+
+.chat_content {
+  width: 60%;
+  background-color: #F3F4F8;
+  position: relative;
+}
+
+.container_chat_with_buttons {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+}
+
+.messages {
+  overflow: auto;
+  max-height: 735px;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+.my_message {
+  display: flex;
+  justify-content: end;
+  list-style: none;
+  flex-direction: row-reverse;
+  margin-right: 30px;
+}
+
+.contact_message {
+  display: flex;
+  list-style: none;
+}
+
+.user_chat_image {
+  width: 40px;
+  height: 40px;
+}
+
+.container_message {
+  display: flex;
+  min-width: 50px;
+  height: 36.34px;
+  background: #FFFFFF;
+  box-shadow: 0px 1.06px 1.06px rgb(0 0 0 / 15%);
+  border-radius: 20px;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.container_my_message {
+  background-color: #ECFFF7;
+}
+
+hr {
+  margin-top: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.container_action_messages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.input_message {
+  background: #FFFFFF;
+  border: 1.06px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  border-radius: 21.2px;
+  height: 40px;
+  margin-left: 40px;
+  width: 88%;
+  padding-left: 20px;
+}
+
+.button_send_message {
+  border: 0;
+}
+
+.icon_send_message {
+  width: 45.53px;
+}
+
+.content_other_user_header {
+  background-color: #00CD7E;
+  height: 74px;
+  display: flex;
+  padding-left: 50px;
+  align-items: center;
+}
+
+.contact_img_header {
+  width: 52px;
+  margin-right: 22px;
+}
+
+.contact_name_header {
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  color: #FFFFFF;
+}
+
+.contact_info {
+  width: 20%;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.contact_img {
+  margin-top: 25px;
+  width: 138px;
+}
+
+.container_data_contat {
+  margin-left: 30px;
+  text-align: left;
+}
+
+.title_data {
+  font-family: Poppins;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #9193A6;
+  mix-blend-mode: normal;
+}
+
+.data {
+  font-family: Poppins;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #2C2E50;
+  margin-top: 4px;
+}

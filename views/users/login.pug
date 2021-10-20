@@ -1,0 +1,33 @@
+extends ../layouts/base
+block styles
+  link(rel="stylesheet", href="/assets/css/login.css")
+block content
+  div.login
+    div.content_image
+      img(src="/assets/img/user.png")
+    div.content_form
+      h2.title Iniciar Sesión
+      form(
+        action="/login"
+        method="post"
+        class="form"
+      )
+        div
+          div.input_container
+            label(for="email" class="label") Correo
+            input(
+              type="email"
+              name="email"
+              placeholder="Correo"
+              class="input"
+            )
+          div.input_container
+            label(for="password" class="label") Contraseña
+            input(
+              type="password"
+              name="password"
+              placeholder="Contraseña"
+              class="input"
+            )
+        div.container_button
+          button.button Iniciar Sesión
